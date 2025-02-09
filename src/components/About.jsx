@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section id="about">
       <div className="container">
-        <h2>Sobre Mim</h2>
+        <h2 id="h2-about">Sobre Mim</h2>
         <p>
         Sou estudante de Tecnologia da Informação na UFRN e tenho paixão por desenvolvimento front-end e experiência prática em React, CSS e JavaScript. Ao longo da minha trajetória acadêmica, trabalhei em projetos desafiadores, onde pude aplicar meus conhecimentos em desenvolvimento de interfaces interativas e responsivas.
         </p>
