@@ -10,14 +10,17 @@
 body {
   font-family: 'Sora','Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #DFDFDF;
+  background-color: #02133d;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
+.icon-header{
+  margin-top: 6px;
+  margin-right: 15px;
+}
 /* Container principal */
 .container {
   width: 90%;
@@ -29,7 +32,10 @@ body {
 
 /* Header */
 header {
-  background-color: #112725;
+  background-image: url(/src/assets/background-TI05.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #FBFCFC;
   padding: 5rem 0 3rem 0;
   text-align: center;
@@ -53,16 +59,6 @@ header p {
   animation-delay: 0.3s;
 }
 
-header a {
-  color: #ff6347;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-header a:hover {
-  color: #e04e35;
-}
 
 /* Animações de transição */
 @keyframes slideIn {
@@ -85,12 +81,17 @@ header a:hover {
 
 /* Seções */
 #projects{
-  background-color:#112725;
+  background: linear-gradient(#011036, #012275 );
 }
 section {
-  padding: 4rem 0;
-  animation: fadeIn 1s ease-out;
-  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section h2 {
@@ -101,6 +102,10 @@ section h2 {
   position: relative;
   animation: fadeIn 1.5s ease-out;
 }
+#about{
+  background-color: #DFDFDF;
+  width: 100%;
+}
 #h2-about{
   color: #333333;
 }
@@ -108,7 +113,7 @@ section h2::after {
   content: '';
   width: 200px;
   height: 5px;
-  background-color: #ff6347;
+  background-color: #142aa5;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -125,6 +130,155 @@ section p {
   margin-left: auto;
   margin-right: auto;
 }
+/*Curriculo*/
+
+#curriculum {
+  background: linear-gradient(#012275, #011036);
+  padding: 5rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+#curriculum h2 {
+  font-size: 2.5rem;
+  color: #d1d1d1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.curriculum-content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.curriculum-content > div {
+  background-color: #DFDFDF;
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.curriculum-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.curriculum-content p,
+.curriculum-content li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.curriculum-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.curriculum-content li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.curriculum-content li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.curriculum-content li strong {
+  color: #333;
+}
+
+.skills,
+.certifications,
+.experience,
+.competencies {
+  text-align: left;
+}
+
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #DFDFDF;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+#divisor{
+  background-image: url(/src/assets/background-TI03.jpg);
+  height: 130px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#divisor p{
+  color: #d1d1d1;
+  text-align: center;
+  padding: 45px;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: x-large;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .curriculum-content {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .curriculum-content > div {
+    padding: 1rem;
+  }
+
+  .curriculum-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .curriculum-content p,
+  .curriculum-content li {
+    font-size: 0.95rem;
+  }
+
+  #curriculum h2 {
+    font-size: 2rem;
+  }
+
+  .education {
+    padding: 1.5rem;
+  }
+
+  .curriculum-content li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #curriculum h2 {
+    font-size: 1.8rem;
+  }
+
+  .curriculum-content > div {
+    padding: 1rem;
+  }
+}
+
+
 
 /* Cards de projeto */
 ul {
@@ -180,57 +334,62 @@ ul li a:hover {
   color: #333;
 }
 #contact{
-  background-color: #112725;
+  background: linear-gradient(#011036, #012275 );
 }
 /* Formulário de contato */
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
-  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 2s ease-out;
 }
 
 form label {
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 form input,
 form textarea {
   padding: 1rem;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #a8a8a8;
   border-radius: 8px;
   transition: border-color 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
-  border-color: #ff6347;
+  border-color: #011957;
   outline: none;
 }
 
 form button {
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #ff6347;
+  width: 50%;
   border: none;
+  background-color: #022e9b;
+  color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 form button:hover {
-  background-color: #e04e35;
-  transform: scale(1.05);
+  background-color: #011957;
+  transition: 0.5s;
+  scale: 1.05;
 }
 
 
@@ -239,7 +398,9 @@ form button:hover {
   header h1 {
     font-size: 2rem;
   }
-
+  header{
+    background-image: url(/src/assets/background-TI04.jpg);
+  }
   header p {
     font-size: 1rem;
   }
