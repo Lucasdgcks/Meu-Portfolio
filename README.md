@@ -16,7 +16,8 @@ Este site foi criado como uma forma de reunir informações sobre minha trajetó
 ## 🌟 Funcionalidades
 
 - **Seção "Sobre Mim"**: Um pouco da minha história, habilidades e interesses.  
-- **Projetos**: Uma lista de projetos que desenvolvi, com links diretos para os repositórios no GitHub.  
+- **Projetos**: Uma lista de projetos que desenvolvi, com links diretos para os repositórios no GitHub.
+- **Curriculo**: Informações sobre habiladades, certificados e cursos que possuo.  
 - **Contato**: Informações para entrar em contato comigo.
 
 ## 🚀 Como rodar o projeto
@@ -26,5 +27,6 @@ Este site foi criado como uma forma de reunir informações sobre minha trajetó
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
    npm install
+   npm install framer-motion
    npm run dev
    
