@@ -14,11 +14,10 @@ const Curriculum = () => {
         <h2>Meu Currículo</h2>
         <div className="curriculum-content">
           
-          {/* Habilidades Técnicas */}
           <div className="skills">
             <h3>🚀 Habilidades Técnicas</h3>
             <ul>
-              <li><strong>Linguagens e Frameworks:</strong> Java (POO), React, HTML5, CSS3, MySQL</li>
+              <li><h4><strong>Linguagens e Frameworks:</strong></h4> Java (POO), React, HTML5, CSS3, MySQL</li>
               <li><h4><strong>Ferramentas:</strong></h4> Git, GitHub, Excel</li>
               <li><h4><strong>Outros:</strong></h4> Informática, Redes de Computadores, Lógica de Programação, Design Responsivo</li>
               <li>
@@ -31,7 +30,6 @@ const Curriculum = () => {
             </ul>
           </div>
 
-          {/* Certificações */}
           <div className="certifications">
             <h3>📜 Certificações & Cursos</h3>
             <ul>
@@ -54,7 +52,6 @@ const Curriculum = () => {
             </ul>
           </div>
 
-          {/* Experiência e Projetos */}
           <div className="experience">
             <h3>💻 Experiência & Projetos</h3>
             <ul>
@@ -69,7 +66,6 @@ const Curriculum = () => {
             </ul>
           </div>
 
-          {/* Competências e Qualidades */}
           <div className="competencies">
             <h3>🌟 Competências & Qualidades</h3>
             <ul>

@@ -24,7 +24,7 @@ body {
 /* Container principal */
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
   flex: 1;
@@ -329,10 +329,17 @@ ul li a {
 ul li a:hover {
   color: #333;
 }
+#card-img{
+  margin-left: 10px;
+}
+#ferrari-png{
+  transform: translate(5px, 7px);
+}
+/* Formulário de contato */
+
 #contact{
   background: linear-gradient(#011036, #012275 );
 }
-/* Formulário de contato */
 form {
   display: flex;
   flex-direction: column;
@@ -388,14 +395,18 @@ form button:hover {
   scale: 1.05;
 }
 
-
+@media (max-width: 1100px){
+  header{
+    background-image: url(/src/assets/background-TI05-mobile.jpg);
+  }
+}
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
   }
   header{
-    background-image: url(/src/assets/background-TI04.jpg);
+    background-image: url(/src/assets/background-TI05-mobile.jpg);
   }
   header p {
     font-size: 1rem;

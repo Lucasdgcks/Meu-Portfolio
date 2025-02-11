@@ -27,8 +27,8 @@ const Projects = () => {
             </a>
           </motion.li>
           <motion.li
-           initial={{ opacity: 0, x: 50 }}
-           whileInView={{ opacity: 1, x: 0 }}
+           initial={{ opacity: 0, y: 50 }}
+           whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 1 }}
            viewport={{ once: true }}
           >
@@ -38,6 +38,40 @@ const Projects = () => {
               <p>Um sistema simples feito em Java de gestão de pedidos que simula o funcionamento de um restaurante. O sistema permite que o restaurante abra e feche, receba pedidos automaticamente com números gerados de forma incremental, processe pedidos, e gere relatórios de vendas e faturamento.</p>
               <a href="https://github.com/Lucasdgcks/Projeto-Restaurante" target="_blank" rel="noopener noreferrer">
                 Ver no GitHub
+              </a>
+          </motion.li>
+          <motion.li
+           initial={{ opacity: 0, x: 50 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           transition={{ duration: 1 }}
+           viewport={{ once: true }}
+          >
+          <img src="src/assets/mysql.png" alt="mysql png" />
+          <img id="card-img" src="src/assets/wampserver.jpg" alt="wampserver jpg" />
+              <h3>Banco de dados</h3>
+      
+              <p>O projeto desenvolvido utiliza exclusivamente o banco de dados MySQL, sendo executado no ambiente WampServer64. O objetivo é demonstrar a criação e gerenciamento de um banco de dados para armazenar e manipular informações de maneira eficiente.</p>
+              <a href="https://github.com/Lucasdgcks/Banco-de-Dados" target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+              </a>
+          </motion.li>
+          <motion.li
+           initial={{ opacity: 0, x: 50 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           transition={{ duration: 1 }}
+           viewport={{ once: true }}
+          >
+            <img src="src/assets/html5.png" alt="html5 png" />
+            <img id="card-img" src="src/assets/css3.png" alt="css3 png" />
+              <h3>Login Ferrari</h3>
+      
+              <p>O projeto foi desenvolvido seguindo a abordagem mobile-first e utiliza apenas HTML e CSS puro, sem o uso de frameworks. Seu principal objetivo é o aprimoramento das habilidades em CSS. O site está hospedado no GitHub Pages.</p>
+              <a href="https://github.com/Lucasdgcks/ProjetoTeladeLoginFerrari" target="_blank" rel="noopener noreferrer">
+                Ver no GitHub
+              </a><br />
+              <a href="https://lucasdgcks.github.io/ProjetoTeladeLoginFerrari/" target="_blank" rel="noopener noreferrer">
+              Executar tela de login
+              <img id="ferrari-png" src="src/assets/ferrari-32.png" alt="ferrari png" />
               </a>
           </motion.li>
         </ul>
