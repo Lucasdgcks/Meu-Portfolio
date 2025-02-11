@@ -34,6 +34,7 @@ body {
 header {
   background-image: url(/src/assets/background-TI05.jpg);
   background-size: contain;
+  overflow: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: #FBFCFC;
@@ -83,16 +84,6 @@ header p {
 #projects{
   background: linear-gradient(#011036, #012275 );
 }
-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 section h2 {
   color: #ddd;
@@ -102,6 +93,7 @@ section h2 {
   position: relative;
   animation: fadeIn 1.5s ease-out;
 }
+
 #about{
   background-color: #DFDFDF;
   width: 100%;
@@ -200,11 +192,15 @@ section p {
 
 .skills,
 .certifications,
-.experience,
 .competencies {
   text-align: left;
 }
-
+.experience ul li{
+  display: block;
+}
+.skills ul li{
+  display: block;
+}
 .education {
   display: flex;
   justify-content: center;

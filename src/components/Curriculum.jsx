@@ -11,7 +11,7 @@ const Curriculum = () => {
       viewport={{ once: true }}
     >
       <div className="container">
-        <h2>📜 Meu Currículo</h2>
+        <h2>Meu Currículo</h2>
         <div className="curriculum-content">
           
           {/* Habilidades Técnicas */}
@@ -19,14 +19,21 @@ const Curriculum = () => {
             <h3>🚀 Habilidades Técnicas</h3>
             <ul>
               <li><strong>Linguagens e Frameworks:</strong> Java (POO), React, HTML5, CSS3, MySQL</li>
-              <li><strong>Ferramentas:</strong> Git, GitHub, Excel</li>
-              <li><strong>Outros:</strong> Informática, Redes de Computadores, Lógica de Programação, Design Responsivo</li>
+              <li><h4><strong>Ferramentas:</strong></h4> Git, GitHub, Excel</li>
+              <li><h4><strong>Outros:</strong></h4> Informática, Redes de Computadores, Lógica de Programação, Design Responsivo</li>
+              <li>
+                <img src="src/assets/git.png" alt="git image" />
+                <img src="src/assets/github.gif" alt="github gif" />
+                <img src="src/assets/programação.gif" alt="computador gif" />
+                <img src="src/assets/webdesign.gif" alt="webdesign gif" />
+                <img src="src/assets/manutenção.png" alt="" />
+              </li>
             </ul>
           </div>
 
           {/* Certificações */}
           <div className="certifications">
-            <h3>📄 Certificações & Cursos</h3>
+            <h3>📜 Certificações & Cursos</h3>
             <ul>
               <li>
                 <img src="src/assets/java-coffee-cup.gif" alt="Java" className="tech-image" />
@@ -52,11 +59,11 @@ const Curriculum = () => {
             <h3>💻 Experiência & Projetos</h3>
             <ul>
               <li>
-                <strong>📌 Projeto Front-End com React</strong>
+                <h4><strong>📌 Projeto Front-End com React</strong></h4>
                 <p>Desenvolvi uma aplicação front-end utilizando React, implementando design responsivo e interatividade. Aprimorei habilidades em organização de código e uso de componentes reutilizáveis.</p>
               </li>
               <li>
-                <strong>📌 Outros Projetos</strong>
+                <h4><strong>📌 Outros Projetos</strong></h4>
                 <p>Projetos utilizando apenas HTML5 e CSS3, disponíveis no meu GitHub.</p>
               </li>
             </ul>

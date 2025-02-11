@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      whileInView={{ opacity: 1, scale: 1 }}
+      whileInView={{ opacity: 1, scale: 1}}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
