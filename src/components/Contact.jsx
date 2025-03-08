@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -7,15 +7,34 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState(null);
+
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setStatus("Enviando...");
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simula requisição async
+      console.log(formData);
+      setStatus("Mensagem enviada com sucesso!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setStatus("Erro ao enviar mensagem. Tente novamente.");
+    }
   };
 
   return (
@@ -46,6 +65,27 @@ const Contact = () => {
 
           <button type="submit">Enviar</button>
         </form>
+        {status && (
+          <motion.div 
+            className="status-message" 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 2 }}
+            style={{ 
+              backgroundColor: status === "Mensagem enviada com sucesso!" ? "#4CAF50" : "#f44336", 
+              color: "#fff", 
+              padding: "10px", 
+              borderRadius: "5px", 
+              marginTop: "100px", 
+              textAlign: "center",
+              width:"300px",
+              margin: "auto"
+            }}
+          >
+            {status}
+          </motion.div>
+        )}
       </div>
     </motion.section>
   );

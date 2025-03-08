@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&family=Sora:wght@100..800&display=swap');
 
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@
 body {
   font-family: 'Sora','Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #02133d;
+  background: linear-gradient(#011036, #012275 );
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
@@ -32,51 +32,48 @@ body {
 
 /* Header */
 header {
-  background-image: url(/src/assets/background-TI05.jpg);
-  background-size: contain;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background: linear-gradient(#011036, #012275 );
   color: #FBFCFC;
   padding: 5rem 0 3rem 0;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  
 }
 
 header h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  text-shadow: 2px 2px 2px black;
   letter-spacing: 2px;
-  animation: slideIn 1s ease-out forwards;
+  animation: slideIn 1.6s ease-out forwards;
 }
 
-header p {
+header #subtitulo {
   font-size: 1.2rem;
   font-weight: 300;
-  animation: fadeIn 1.5s ease-out forwards;
-  animation-delay: 0.3s;
+  animation: slideIn 1.6s ease-out forwards;
 }
-
+header .icon-header{
+  animation: slideInIcon 1.6s ease-out forwards;
+}
 
 /* Animações de transição */
 @keyframes slideIn {
   0% {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes fadeIn {
+@keyframes slideInIcon {
   0% {
-    opacity: 0;
+    transform: translateX(-700%);
   }
   100% {
-    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -92,14 +89,83 @@ section h2 {
   text-align: center;
   position: relative;
   animation: fadeIn 1.5s ease-out;
+  text-shadow: 2px 2px 2px black;
 }
 
 #about{
   background-color: #DFDFDF;
   width: 100%;
 }
+#about-background{
+  display: flex;
+  justify-content: space-between;
+}
+#about-content{
+  width: 600px;
+}
+.perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.perfil-card {
+  background-color: #b4b4b4;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.perfil-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #141414;
+  margin-bottom: 10px;
+}
+
+.perfil-card p {
+  font-size: 18px;
+  color: #292929;
+}
+.icon-perfil > img{
+  width: 35px;
+  border-radius: 20px;
+}
+.icon-perfil > img:hover{
+  
+  transition: 1s;
+  box-shadow: 2px 2px 2px black;
+}
+#icon-insta{
+  width: 40px;
+  transform: translate(5px, 2px);
+}
+#icon-insta:hover{
+  transition: 1s;
+  filter: invert(100%);
+}
+
 #h2-about{
-  color: #333333;
+  color: #073597;
+  text-shadow: 1px 2px 1px rgb(8, 22, 85);
 }
 section h2::after {
   content: '';
@@ -110,6 +176,7 @@ section h2::after {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: 2px 2px 2px #011036;
 }
 
 section p {
@@ -121,6 +188,17 @@ section p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 1000px) {
+  #about{
+    background: linear-gradient(#022274, #012275 );
+  }
+  #about-content{
+    display: none;
+  }
+  .perfil{
+    margin: auto;
+  }
 }
 /*Curriculo*/
 
@@ -148,7 +226,7 @@ section p {
 }
 
 .curriculum-content > div {
-  background-color: #DFDFDF;
+  background-color: #dfdfdfec;
   padding: 1.8rem;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -219,6 +297,7 @@ section p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  
 }
 #divisor p{
   color: #d1d1d1;
@@ -227,10 +306,14 @@ section p {
   font-weight: bolder;
   font-style: italic;
   font-size: x-large;
+  text-shadow: 1px 4px 4px black;
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  #about-background{
+    display: block;
+  }
   .curriculum-content {
     grid-template-columns: 1fr;
     padding: 0 10px;
@@ -281,7 +364,7 @@ ul {
   
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Centraliza os cards */
+  justify-content: center;  
   gap: 20px;
   margin-top: 2rem;
   padding: 0;
@@ -294,7 +377,7 @@ ul li {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 400px;  /* Largura fixa para os cards */
+  width: 400px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -395,19 +478,12 @@ form button:hover {
   scale: 1.05;
 }
 
-@media (max-width: 1100px){
-  header{
-    background-image: url(/src/assets/background-TI05-mobile.jpg);
-  }
-}
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
   }
-  header{
-    background-image: url(/src/assets/background-TI05-mobile.jpg);
-  }
+ 
   header p {
     font-size: 1rem;
   }
@@ -437,14 +513,14 @@ form button:hover {
   header h1 {
     font-size: 1.8rem;
   }
-
+ 
   section h2 {
     font-size: 1.8rem;
   }
 
   ul li {
     padding: 15px;
-    width: 100%;  /* Full width on small screens */
+    width: 100%; 
   }
 
   form button {
