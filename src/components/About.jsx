@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import perfil from '../assets/image.png';
+import iconinsta from '../assets/icons8-instagram.svg';
+import icongithub from '../assets/icons8-github.svg';
 
 const About = () => {
   return (
@@ -22,12 +25,12 @@ const About = () => {
         </div>
         <div className="perfil">
           <div className="perfil-card">
-            <img src="src/assets/image.png" alt="Perfil" className="perfil-image"/>
+            <img src={perfil} alt="Perfil" className="perfil-image"/>
             <div id="info-perfil">
               <h3>Lucas Dantas</h3>
               <p>24 anos</p>
-              <p><a target="_blank"  className="icon-perfil" href="https://github.com/Lucasdgcks?tab=repositories"><img src="src/assets/icons8-github.svg" alt="" /></a>
-              <a href="https://www.instagram.com/lucasd_g/"><img id="icon-insta" src="src/assets/icons8-instagram.svg" alt="" /></a>
+              <p><a target="_blank"  className="icon-perfil" href="https://github.com/Lucasdgcks?tab=repositories"><img src={icongithub} alt="icon github" /></a>
+              <a href="https://www.instagram.com/lucasd_g/"><img id="icon-insta" src={iconinsta} alt="insta img" /></a>
               </p>
             </div>
            
