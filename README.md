@@ -29,4 +29,9 @@ Este site foi criado como uma forma de reunir informações sobre minha trajetó
    npm install
    npm install framer-motion
    npm run dev
+
+## Site no Github Pages
+
+[Executar site](https://lucasdgcks.github.io/Meu-Portfolio/)
+
    
