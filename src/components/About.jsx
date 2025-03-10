@@ -23,11 +23,13 @@ const About = () => {
         <div className="perfil">
           <div className="perfil-card">
             <img src="src/assets/image.png" alt="Perfil" className="perfil-image"/>
-            <h3>Lucas Dantas</h3>
-            <p>24 anos</p>
-            <p><a target="_blank"  className="icon-perfil" href="https://github.com/Lucasdgcks?tab=repositories"><img src="src/assets/icons8-github.svg" alt="" /></a>
-            <a href="https://www.instagram.com/lucasd_g/"><img id="icon-insta" src="src/assets/icons8-instagram.svg" alt="" /></a>
-            </p>
+            <div id="info-perfil">
+              <h3>Lucas Dantas</h3>
+              <p>24 anos</p>
+              <p><a target="_blank"  className="icon-perfil" href="https://github.com/Lucasdgcks?tab=repositories"><img src="src/assets/icons8-github.svg" alt="" /></a>
+              <a href="https://www.instagram.com/lucasd_g/"><img id="icon-insta" src="src/assets/icons8-instagram.svg" alt="" /></a>
+              </p>
+            </div>
            
           </div>
         </div>

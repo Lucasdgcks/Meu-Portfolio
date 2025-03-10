@@ -67,7 +67,14 @@ header .icon-header{
     transform: translateY(0);
   }
 }
-
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes slideInIcon {
   0% {
     transform: translateX(-700%);
@@ -112,13 +119,15 @@ section h2 {
 }
 
 .perfil-card {
-  background-color: #b4b4b4;
+  background-image: url(/src/assets/background-perfil02.jpg);
+  background-size: cover;
   width: 400px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInRight 2s;
 }
 
 .perfil-card:hover {
@@ -166,6 +175,11 @@ section h2 {
 #h2-about{
   color: #073597;
   text-shadow: 1px 2px 1px rgb(8, 22, 85);
+}
+#info-perfil{
+  background-color: #b1c7fde8;
+  border: 1px solid #505050;
+  border-radius: 10px;
 }
 section h2::after {
   content: '';
