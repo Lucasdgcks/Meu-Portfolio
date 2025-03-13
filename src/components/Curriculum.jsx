@@ -48,11 +48,11 @@ const Curriculum = () => {
             <ul>
               <li>
                 <img src={javacoffee} alt="Java" className="tech-image" />
-                <strong>Java POO</strong>  Curso em Vídeo (40 horas)
+                <strong>Java POO</strong> Curso em Vídeo (40 horas)
               </li>
               <li>
                 <img src={excel} alt="Excel" className="tech-image" />
-                <strong>Excel</strong>  Curso em Vídeo (40 horas)
+                <strong>Excel</strong> Curso em Vídeo (40 horas)
               </li>
               <li>
                 <img src={codegif} alt="HTML/CSS" className="tech-image" />

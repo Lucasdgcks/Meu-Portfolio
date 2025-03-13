@@ -26,12 +26,20 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <img src={reactgif} alt="react gif" />
-            <h3>Loja Virtual</h3>
+            <h3>Tech World</h3>
             <h5>Em desenvolvimento...</h5>
-            <p>Este é um site de e-commerce criado usando React e CSS puro. O projeto simula uma loja virtual com várias categorias de produtos, exibição de produtos em diferentes páginas e uma experiência de usuário rica, com animações e transições suaves. A aplicação é completamente responsiva e oferece uma experiência visual dinâmica em qualquer dispositivo.</p>
-            <a href="https://github.com/Lucasdgcks/Loja-Virtual" target="_blank">
-              Ver no GitHub
+            <br />
+            <h5>Meu projeto Principal</h5>
+            <p>Projeto desenvolvido com React e Vite, utilizando React Router para navegação, Framer Motion para animações e um design responsivo. O conteúdo visual foi criado com Microsoft Pilot (IA) e o vídeo promocional foi obtido do Pexels.</p>
+            <p><b>Backend em desenvolvimento...</b></p>
+            <a href="https://lucasdgcks.github.io/Tech-World/" target="_blank">
+              Executar site
             </a>
+            <p>
+              <a target="_blank" href="https://github.com/Lucasdgcks/Tech-World">
+                Ver no Github
+               </a>
+            </p>
           </motion.li>
           <motion.li
            initial={{ opacity: 0, y: 50 }}

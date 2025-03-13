@@ -46,7 +46,7 @@ const Contact = () => {
       viewport={{ once: true }}
     >
       <div className="container">
-        <h2>Entre em Contato</h2>
+        <h2 id="contato-h2">Entre em Contato</h2>
         <form onSubmit={handleSubmit}>
           <label>
             Nome:

@@ -110,6 +110,9 @@ section h2 {
 #about-content{
   width: 600px;
 }
+#about-content > p{
+  font-size: 12pt;
+}
 .perfil {
   display: flex;
   justify-content: center;
@@ -136,22 +139,22 @@ section h2 {
 }
 
 .perfil-image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
 }
 
 .perfil-card h3 {
-  font-size: 22px;
+  font-size: 14pt;
   font-weight: bold;
   color: #141414;
   margin-bottom: 10px;
 }
 
 .perfil-card p {
-  font-size: 18px;
+  font-size: 12pt;
   color: #292929;
 }
 .icon-perfil > img{
@@ -175,6 +178,7 @@ section h2 {
 #h2-about{
   color: #073597;
   text-shadow: 1px 2px 1px rgb(8, 22, 85);
+  font-size: 25pt;
 }
 #info-perfil{
   background-color: #b1c7fde8;
@@ -217,6 +221,7 @@ section p {
 /*Curriculo*/
 
 #curriculum {
+  
   background: linear-gradient(#012275, #011036);
   padding: 5rem 0;
   color: #fff;
@@ -224,7 +229,7 @@ section p {
 }
 
 #curriculum h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #d1d1d1;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -235,29 +240,30 @@ section p {
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
   max-width: 1200px;
-  margin: 0 auto;
+  transform: translate(50px);
   padding: 0 20px;
 }
 
 .curriculum-content > div {
   background-color: #dfdfdfec;
-  padding: 1.8rem;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
   overflow: hidden;
 }
 
 .curriculum-content h3 {
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
   color: #333;
-  margin-bottom: 1.2rem;
   text-transform: uppercase;
 }
 
 .curriculum-content p,
 .curriculum-content li {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 11pt;
+  line-height: 1;
   color: #555;
 }
 
@@ -280,6 +286,7 @@ section p {
 
 .curriculum-content li strong {
   color: #333;
+  margin-right: 20px;
 }
 
 .skills,
@@ -390,7 +397,7 @@ ul li {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
   width: 400px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -404,13 +411,13 @@ ul li:hover {
 }
 
 ul li h3 {
-  font-size: 1.6rem;
+  font-size: 14pt;
   margin-bottom: 10px;
   color: #333;
 }
 
 ul li p {
-  font-size: 1rem;
+  font-size: 12pt;
   color: #666;
 }
 
@@ -442,16 +449,16 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   background: #fff;
-  padding: 2rem;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 form label {
-  font-size: 1.1rem;
+  font-size: 12pt;
   font-weight: bold;
   margin-bottom: 0.5rem;
   text-align: center;
@@ -476,7 +483,7 @@ form textarea:focus {
 
 form button {
   padding: 1rem 2rem;
-  font-size: 1.2rem;
+  font-size: 12pt;
   width: 50%;
   border: none;
   background-color: #022e9b;
@@ -491,7 +498,9 @@ form button:hover {
   transition: 0.5s;
   scale: 1.05;
 }
-
+.container > h2{
+  font-size: 24pt;
+}
 /* Responsividade */
 @media (max-width: 768px) {
   header h1 {
